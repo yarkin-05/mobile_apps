@@ -1,0 +1,7 @@
+{
+  "name": "super",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
