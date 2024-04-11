@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <form #form="ngForm" (ngSubmit)="login(form)">
+    <div>
+      <ion-item>
+        <ion-input
+          name="email"
+          type="email"
+          placeholder="youremail@example.com"
+          ngModel
+          required
+        ></ion-input>
+
+        <ion-input
+          name="password"
+          type="password"
+          placeholder="your password"
+          ngModel
+          required
+        ></ion-input>
+
+      </ion-item>
+    </div>
+    <div>
+      <ion-button type="submit" [disabled]="form.invalid"> Iniciar sesión</ion-button>
+    </div>
+  </form>
+  <div>
+    <h6 (click)="goToReset()">olvide la contraseña</h6>
+    <h6 (click)="goToRegister()">Registrarse</h6>
+  </div>
+</ion-content>

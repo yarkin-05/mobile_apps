@@ -47,7 +47,6 @@ export class AuthService {
       await sendPasswordResetEmail(this.auth, email);
     } catch (error) {
       console.log(error);
-      return null;
     }
   }
 }

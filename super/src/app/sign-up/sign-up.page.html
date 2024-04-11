@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>sign-up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">sign-up</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <form #form="ngForm" (ngSubmit)="signUp(form)">
+    <div>
+      <ion-item>
+        <ion-input
+          name="email"
+          type="email"
+          placeholder="youremail@example.com"
+          ngModel
+          required
+        ></ion-input>
+
+        <ion-input
+          name="password"
+          type="password"
+          placeholder="your password"
+          ngModel
+          required
+        ></ion-input>
+
+      </ion-item>
+    </div>
+    <div>
+      <ion-button type="submit" [disabled]="form.invalid"> I¡Craer Cuenta</ion-button>
+    </div>
+  </form>
+
+</ion-content>
