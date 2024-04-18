@@ -1,0 +1,7 @@
+{
+  "name": "pankeis",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
