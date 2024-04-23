@@ -1,0 +1,77 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calculator
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen] = "true">
+    <div class="calc-main">
+      <div class="calc-display">
+        <ion-input type="number" class="ion-text-end">{{display}}</ion-input>
+      </div>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-button shape="round" color="light" (click)="pressButton('clear')">{{clear_value}}</ion-button>
+              <ion-button shape="round" color="light" (click)="pressButton('changeSign')">+/-</ion-button>
+            
+              <ion-button shape="round" color="light" (click)="pressButton('%')">%</ion-button>
+           
+              <ion-button shape="round" color="warning" (click)="pressButton('/')">÷</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-button shape="round" color="dark" (click)="pressButton('7')">7</ion-button>
+            
+              <ion-button shape="round" color="dark" (click)="pressButton('8')">8</ion-button>
+            
+              <ion-button shape="round" color="dark" (click)="pressButton('9')">9</ion-button>
+            
+              <ion-button shape="round" color="warning" (click)="pressButton('*')">*</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-button shape="round" color="dark" (click)="pressButton('4')">4</ion-button>
+           
+              <ion-button shape="round" color="dark" (click)="pressButton('5')">5</ion-button>
+      
+              <ion-button shape="round" color="dark" (click)="pressButton('6')">6</ion-button>
+         
+              <ion-button shape="round" color="warning" (click)="pressButton('-')">-</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-button shape="round" color="dark" (click)="pressButton('1')">1</ion-button>
+           
+              <ion-button shape="round" color="dark" (click)="pressButton('2')">2</ion-button>
+           
+              <ion-button shape="round" color="dark" (click)="pressButton('3')">3</ion-button>
+           
+              <ion-button shape="round" color="warning" (click)="pressButton('+')">+</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-button shape="round" color="dark" (click)="pressButton('0')" class="double_width">0</ion-button>
+              <ion-button shape="round" color="dark" (click)="pressButton('.')">.</ion-button>
+          
+              <ion-button shape="round" color="warning" (click)="pressButton('=')">=</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+  </ion-content>
+
+
