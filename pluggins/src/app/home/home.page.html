@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <button (click)="showHelloToast()">Show Toast</button>
+  </div>
+
+
+
+  <div>
+    <input type="text" [(ngModel)]="clipboardText" placeholder="Enter text to copy to clipboard">
+
+    <button (click)="writeToClipboard()">Copy to clipboard</button>
+  </div>
+  <button (click)="checkClipboard()">Check clipboard</button>
+
+</ion-content>
